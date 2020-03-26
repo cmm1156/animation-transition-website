@@ -1,0 +1,87 @@
+
+/* ### SHIELD STYLE ### */
+
+.shieldContainer {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+.outer-circle, .white-circle, .inner-circle, .blue-circle, .star {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.outer-circle {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  z-index: 1;
+  width: 49vw;
+  height: 49vw;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.white-circle {
+  align-self: center;
+  z-index: 2;
+  width: 40vw;
+  height: 40vw;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.inner-circle {
+  z-index: 3;
+  width: 30vw;
+  height: 30vw;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.blue-circle {
+  z-index: 4;
+  width: 20vw;
+  height: 20vw;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+.star, .star:hover {
+  z-index: 5;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+
+  /* animation: spin 4s 1; */
+
+}
+.star img {
+  margin: 0px;
+  width: 19vw;
+  margin-bottom: 17px;
+}
+
+/* .star:hover {
+  position: absolute;
+  animation: spin 5s 1;
+  animation-direction: alternate;
+  animation-play-state: running;
+} */
+
+@keyframes spin {
+  0%{transform: rotate(0deg);}
+  25%{transform: rotate(270deg);}
+  75%{transform: rotate(-30deg);}
+  100%{transform: rotate(0deg);}
+}
